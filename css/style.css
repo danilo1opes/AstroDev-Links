@@ -26,6 +26,7 @@
 
 body{
     background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 
 body *{
@@ -63,8 +64,7 @@ body *{
 #switch {
     position: relative;
     width: 64px;
-
-    margin: 4px auto;
+     margin: 4px auto;
 }
 
 #switch button {
@@ -102,11 +102,9 @@ body *{
 
 ul {
     list-style: none;
-    
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     padding: 24px 8px;
 }
 
@@ -142,9 +140,7 @@ ul li a:hover {
 #social-links {
     display: flex;
     justify-content: center;
-
     padding: 24px 0;
-
     font-size: 24px;
 }
 
@@ -167,4 +163,16 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+/* media queries */
+
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(/assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(/assets/bg-desktop-light.jpg);
+    }
 }
